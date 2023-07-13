@@ -17,24 +17,31 @@
 */
 import Index from "views/Index.js";
 import Profile from "views/examples/Profile.js";
-import Maps from "views/examples/Maps.js";
 
 import AssignBatches from "views/examples/AssignBatches.js";
 import ApproveLectures from "views/examples/ApproveLectures.js";
 import ApprovedLectures from "views/examples/ApprovedLectures.js";
 
+import Configurations from "views/examples/Configurations.js";
+
+import LectureCoverages from "views/examples/LectureCoverages.js";
 import ManageCourses from "views/examples/ManageCourses.js";
 import ManageLecturers from "views/examples/ManageLecturers.js";
 import ManageBatches from "views/examples/ManageBatches.js";
 import ManageStudents from "views/examples/ManageStudents.js";
 import ManageBranches from "views/examples/ManageBranches.js";
 
+
+import PaymentApproval from "views/examples/PaymentApproval.js";
 import ApprovedPayment from "views/examples/ApprovedPayment.js";
 import RollbackApprovedPayments from "views/examples/RollbackApprovedPayments.js";
 
-import Register from "views/examples/Register.js";
-import Login from "views/examples/Login.js";
-import Tables from "views/examples/Tables.js";
+
+import PaymentReports from "views/examples/PaymentReports.js";
+import FinalizedPayments from "views/examples/FinalizedPayments.js";
+import GenerateReports from "views/examples/GenerateReports.js";
+
+
 import Icons from "views/examples/Icons.js";
 
 var routes = [
@@ -53,10 +60,10 @@ var routes = [
     layout: "/admin",
   },
   {
-    path: "/maps",
+    path: "/LectureCoverages",
     name: "Lecture Coverages",
     icon: "fa fa-desktop",
-    component: <Maps />,
+    component: <LectureCoverages />,
     layout: "/admin",
   },
 
@@ -89,10 +96,10 @@ var routes = [
 
 
   {
-    path: "/tables",
+    path: "/Configurations",
     name: "Configurations",
     icon: "	far fa-edit",
-    component: <Tables />,
+    component: <Configurations />,
     layout: "/admin",
   },
 
@@ -136,11 +143,11 @@ var routes = [
 //
 
   {
-    path: "/login",
+    path: "/PaymentApproval",
     name: "Payment Approval",
     icon: "	far fa-edit",
-    component: <Login />,
-    layout: "/auth",
+    component: <PaymentApproval/>,
+    layout: "/admin",
   },
 
   // drag drop Payment approval
@@ -162,12 +169,31 @@ var routes = [
   // 
 
   {
-    path: "/register",
+    path: "/PaymentReports",
     name: "Payment Reports",
     icon: "	far fa-edit",
-    component: <Register />,
-    layout: "/auth",
+    component: <PaymentReports />,
+    layout: "/admin",
   },
+
+  // drag drop payment reports
+  {
+    path: "/FinalizedPayments",
+    name: "Finalized Payments",
+    icon: "	",
+    component: <FinalizedPayments />,
+    layout: "/admin",
+  },
+  {
+    path: "/GenerateReports",
+    name: "Generate Reports",
+    icon: "	",
+    component: <GenerateReports/>,
+    layout: "/admin",
+  },
+
+  //
+
   {
     path: "/user-profile",
     name: "View User Login",
